@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soluciones en Excel | Alinea Future Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/solucionesexc.css">
+</head>
+<body class="bg-slate-50 text-slate-900">
+
+    <header id="main-header" class="fixed w-full z-50 transition-all duration-500 py-6 top-0">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-2 group">
+                <img src="img/Logo1.png" alt="Logo" class="w-10 h-10 transform group-hover:scale-105 transition-transform duration-500">
+                <span id="logo-text" class="text-2xl font-bold tracking-tight transition-colors duration-300">
+                    Alinea <span class="text-transparent bg-clip-text bg-gradient-brand">Future</span>
+                </span>
+            </a>
+
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="nav-link text-sm font-medium transition-colors duration-300">Inicio</a>
+               <div class="relative group">
+  <button class="nav-link flex items-center gap-1 text-sm font-medium text-white/80 hover:text-white transition-colors duration-300 focus:outline-none">
+    Servicios
+    <svg class="w-4 h-4 mt-0.5 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+
+  <!-- Dropdown -->
+ <div class="absolute left-0 mt-3 w-64 bg-white rounded-xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+
+    <a href="Documentacion_normativa.html" class="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-purple transition-colors">
+      Documentación Normativa
+    </a>
+
+    <a href="Ingenieria_procesos.html" class="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-purple transition-colors">
+      Ingeniería de Procesos
+    </a>
+
+    <a href="Herramientas_web.html" class="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-purple transition-colors">
+      Herramientas Web
+    </a>
+
+    <a href="Paginaweb.html" class="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-purple transition-colors">
+      Creación de Página Web
+    </a>
+
+    <a href="soluciones_Excel.html" class="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-purple transition-colors">
+      Soluciones en Excel
+    </a>
+
+    <a href="Automatizacion.html" class="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-purple transition-colors border-t">
+      Automatización & IA
+    </a>
+
+  </div>
+</div>
+                <a href="index.html#metodologia" class="nav-link text-sm font-medium transition-colors duration-300">Metodología</a>
+                <a href="index.html#contacto" class="bg-gradient-brand hover:opacity-90 text-white px-5 py-2.5 rounded-lg text-sm font-bold shadow-lg transition-all duration-300 hover:-translate-y-1">Diagnóstico</a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-slate-900 hover:text-brand-cyan transition-colors p-2">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] transform translate-x-full flex flex-col p-8">
+            <div class="flex justify-between items-center mb-10">
+                <span class="text-2xl font-bold text-brand-primary">Alinea <span class="text-brand-purple">Future</span></span>
+                <button id="close-menu-btn" class="text-slate-800 hover:text-red-500 p-2 transition-colors">
+                    <i data-lucide="x" class="w-8 h-8"></i>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-6">
+                <a href="index.html" class="mobile-link text-xl font-bold text-slate-800 border-b border-slate-100 pb-4">Inicio</a>
+                <a href="index.html#servicios" class="mobile-link text-xl font-bold text-slate-800 border-b border-slate-100 pb-4">Servicios</a>
+                <a href="index.html#metodologia" class="mobile-link text-xl font-bold text-slate-800 border-b border-slate-100 pb-4">Metodología</a>
+                <a href="index.html#contacto" class="mobile-link w-full bg-gradient-brand text-white px-6 py-4 rounded-xl text-center font-bold text-lg mt-4 shadow-lg">Solicitar Diagnóstico</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-24">
+        <section class="relative min-h-[60vh] flex items-center bg-brand-primary overflow-hidden">
+            <div class="absolute inset-0 opacity-10">
+                <div class="absolute inset-0" style="background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 40px 40px;"></div>
+            </div>
+            <div class="absolute top-0 right-0 w-full md:w-2/3 h-full bg-gradient-to-l from-brand-purple/20 to-transparent pointer-events-none"></div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-4xl animate-in">
+                    <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full mb-6 border border-white/10">
+                        <span class="w-2 h-2 bg-brand-cyan rounded-full animate-pulse"></span>
+                        <span class="text-white text-xs font-semibold uppercase tracking-wider">Automatización Inteligente</span>
+                    </div>
+                    
+                    <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight animate-in delay-100">
+                        Soluciones en <br><span class="text-transparent bg-clip-text bg-gradient-brand">Excel</span>
+                    </h1>
+                    
+                    <p class="text-xl text-slate-300 mb-8 max-w-3xl font-light leading-relaxed animate-in delay-200">
+                        Desarrollo de formularios inteligentes, automatización con macros VBA y plantillas de gestión robustas que optimizan sus operaciones diarias.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4 animate-in delay-300">
+                        <a href="index.html#contacto" class="bg-gradient-brand hover:opacity-90 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center shadow-lg hover:shadow-brand-purple/30 transition-all duration-300 hover:-translate-y-1">
+                            Solicitar Desarrollo
+                            <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                        </a>
+                        <a href="index.html#servicios" class="bg-white/5 hover:bg-white/10 text-white backdrop-blur-sm border border-white/20 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 text-center flex items-center justify-center hover:scale-105">
+                            Ver Todos los Servicios
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-3 gap-8 mb-20">
+                    <div class="text-center reveal">
+                        <div class="w-16 h-16 bg-gradient-brand rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <i data-lucide="zap" class="text-white w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Automatización Total</h3>
+                        <p class="text-slate-600 text-sm">Macros que eliminan tareas repetitivas</p>
+                    </div>
+                    
+                    <div class="text-center reveal">
+                        <div class="w-16 h-16 bg-gradient-brand rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <i data-lucide="shield-check" class="text-white w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Validación de Datos</h3>
+                        <p class="text-slate-600 text-sm">Controles inteligentes que previenen errores</p>
+                    </div>
+                    
+                    <div class="text-center reveal">
+                        <div class="w-16 h-16 bg-gradient-brand rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                            <i data-lucide="bar-chart-2" class="text-white w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Reportes Automáticos</h3>
+                        <p class="text-slate-600 text-sm">Generación instantánea de informes</p>
+                    </div>
+                </div>
+
+                <div class="max-w-5xl mx-auto">
+                    <div class="text-center mb-12 reveal">
+                        <h2 class="text-brand-primary text-sm font-bold uppercase tracking-widest mb-4">Catálogo de Soluciones</h2>
+                        <p class="text-3xl font-bold text-slate-900 mb-6">Tipos de Herramientas Excel que Desarrollamos</p>
+                        <div class="w-24 h-1.5 bg-gradient-brand mx-auto rounded-full"></div>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-brand-purple/30 hover:shadow-xl transition-all reveal group cursor-default">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-brand-primary w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-brand transition-all duration-500">
+                                    <i data-lucide="file-spreadsheet" class="text-brand-cyan w-6 h-6 group-hover:text-white transition-colors"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2">Plantillas de Gestión</h3>
+                                    <p class="text-slate-600 text-sm">Control de proyectos, presupuestos, cronogramas y seguimiento de actividades con dashboards.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-brand-purple/30 hover:shadow-xl transition-all reveal group cursor-default">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-brand-primary w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-brand transition-all duration-500">
+                                    <i data-lucide="calculator" class="text-brand-cyan w-6 h-6 group-hover:text-white transition-colors"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2">Calculadoras Especializadas</h3>
+                                    <p class="text-slate-600 text-sm">Herramientas financieras, ingeniería, ROI, amortizaciones y análisis de sensibilidad.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-brand-purple/30 hover:shadow-xl transition-all reveal group cursor-default">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-brand-primary w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-brand transition-all duration-500">
+                                    <i data-lucide="database" class="text-brand-cyan w-6 h-6 group-hover:text-white transition-colors"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2">Bases de Datos Relacionales</h3>
+                                    <p class="text-slate-600 text-sm">Sistemas de registro con búsquedas avanzadas, filtros y consultas SQL integradas.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-brand-purple/30 hover:shadow-xl transition-all reveal group cursor-default">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-brand-primary w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-brand transition-all duration-500">
+                                    <i data-lucide="play-circle" class="text-brand-cyan w-6 h-6 group-hover:text-white transition-colors"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2">Macros VBA Avanzadas</h3>
+                                    <p class="text-slate-600 text-sm">Automatización de procesos complejos: importación masiva, envío de emails, integración APIs.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-brand-purple/30 hover:shadow-xl transition-all reveal group cursor-default">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-brand-primary w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-brand transition-all duration-500">
+                                    <i data-lucide="pie-chart" class="text-brand-cyan w-6 h-6 group-hover:text-white transition-colors"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2">Dashboards Dinámicos</h3>
+                                    <p class="text-slate-600 text-sm">Paneles de control interactivos con gráficos, tablas dinámicas y segmentadores de datos.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:border-brand-purple/30 hover:shadow-xl transition-all reveal group cursor-default">
+                            <div class="flex items-start gap-4">
+                                <div class="bg-brand-primary w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:bg-gradient-brand transition-all duration-500">
+                                    <i data-lucide="settings" class="text-brand-cyan w-6 h-6 group-hover:text-white transition-colors"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-bold mb-2">Formularios Personalizados</h3>
+                                    <p class="text-slate-600 text-sm">UserForms con validaciones, listas desplegables y navegación intuitiva entre pantallas.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-slate-50">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center reveal">
+                    <h2 class="text-brand-primary text-sm font-bold uppercase tracking-widest mb-4">Casos de Uso Comunes</h2>
+                    <p class="text-3xl font-bold text-slate-900 mb-6">¿Para Qué Usar Excel Avanzado?</p>
+                    <div class="w-24 h-1.5 bg-gradient-brand mx-auto rounded-full mb-12"></div>
+                    
+                    <div class="grid md:grid-cols-3 gap-6 text-left">
+                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow">
+                            <h4 class="font-bold mb-2 flex items-center gap-2">
+                                <i data-lucide="check-circle" class="text-brand-purple w-5 h-5"></i>
+                                Control Financiero
+                            </h4>
+                            <p class="text-sm text-slate-600">Flujo de caja, estados financieros, análisis de costos</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow">
+                            <h4 class="font-bold mb-2 flex items-center gap-2">
+                                <i data-lucide="check-circle" class="text-brand-purple w-5 h-5"></i>
+                                Gestión de Inventarios
+                            </h4>
+                            <p class="text-sm text-slate-600">Control de stock, alertas, kardex automatizado</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow">
+                            <h4 class="font-bold mb-2 flex items-center gap-2">
+                                <i data-lucide="check-circle" class="text-brand-purple w-5 h-5"></i>
+                                RRHH y Nómina
+                            </h4>
+                            <p class="text-sm text-slate-600">Cálculo de salarios, vacaciones, beneficios</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow">
+                            <h4 class="font-bold mb-2 flex items-center gap-2">
+                                <i data-lucide="check-circle" class="text-brand-purple w-5 h-5"></i>
+                                Ventas y CRM
+                            </h4>
+                            <p class="text-sm text-slate-600">Seguimiento de clientes, pipeline, comisiones</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow">
+                            <h4 class="font-bold mb-2 flex items-center gap-2">
+                                <i data-lucide="check-circle" class="text-brand-purple w-5 h-5"></i>
+                                Producción
+                            </h4>
+                            <p class="text-sm text-slate-600">OEE, programación, control de calidad</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-shadow">
+                            <h4 class="font-bold mb-2 flex items-center gap-2">
+                                <i data-lucide="check-circle" class="text-brand-purple w-5 h-5"></i>
+                                Reportes Ejecutivos
+                            </h4>
+                            <p class="text-sm text-slate-600">KPIs, métricas, visualización de datos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="max-w-3xl mx-auto text-center reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Necesita Automatizar sus Procesos en Excel?</h2>
+                    <p class="text-slate-600 mb-8 text-lg">Descríbanos su necesidad y desarrollaremos una solución personalizada que le ahorrará horas de trabajo manual.</p>
+                    <a href="index.html#contacto" class="inline-flex items-center bg-gradient-brand text-white px-8 py-4 rounded-xl font-bold shadow-lg hover:opacity-90 transition-all hover:-translate-y-1">
+                        Solicitar Desarrollo Excel
+                        <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-primary text-slate-300 py-12 border-t border-white/10 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 40px 40px;"></div>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="index.html" class="flex items-center gap-2">
+                        <img src="img/Logo1.png" alt="Logo" class="w-8 h-8">
+                        <span class="text-xl font-bold text-white">
+                            Alinea <span class="text-brand-cyan">Future</span>
+                        </span>
+                    </a>
+                </div>
+                
+                <div class="flex flex-col md:flex-row items-center gap-6 text-sm">
+                    <a href="index.html#servicios" class="hover:text-brand-cyan transition-colors">Servicios</a>
+                    <a href="index.html#contacto" class="hover:text-brand-cyan transition-colors">Contacto</a>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-purple transition-all">
+                            <i data-lucide="linkedin" class="w-4 h-4"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-purple transition-all">
+                            <i data-lucide="instagram" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/10 mt-8 pt-8 text-center text-xs text-slate-500">
+                <p>&copy; 2026 Alinea Future Consulting. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/solucionesexc.js"></script>
+</body>
+</html>

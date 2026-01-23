@@ -1,0 +1,45 @@
+/* --- CHATBOT CSS OPTIMIZATION --- */
+
+/* Scrollbar minimalista para el chat */
+#chat-feed::-webkit-scrollbar {
+    width: 5px;
+}
+
+#chat-feed::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#chat-feed::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1; /* Slate-300 */
+    border-radius: 10px;
+    border: 2px solid #f8fafc; /* Slate-50 match background */
+}
+
+/* Animación de escritura (puntos suspensivos) */
+.typing-dot {
+    animation: typing 1.4s infinite ease-in-out both;
+    width: 5px;
+    height: 5px;
+    background-color: #94a3b8; /* Slate-400 */
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 1px;
+}
+
+.typing-dot:nth-child(1) { animation-delay: -0.32s; }
+.typing-dot:nth-child(2) { animation-delay: -0.16s; }
+
+@keyframes typing {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+}
+
+/* Animación de entrada de mensajes */
+.message-enter {
+    animation: slideUpFade 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+@keyframes slideUpFade {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

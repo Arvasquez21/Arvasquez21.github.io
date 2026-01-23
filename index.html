@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alinea Future Consulting - Soluciones Integrales de Ingeniería y Tecnología.">
+    <title>Alinea Future Solutions | Servicios Integrales</title>
+    <link rel="stylesheet" href="css/Index.css">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/chatbots.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/Index.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-brand-purple selection:text-white">
+
+    <div id="splash-screen" class="fixed inset-0 z-[100] bg-brand-primary flex flex-col items-center justify-center">
+    <div class="animate-pulse-logo flex flex-col items-center">
+
+        <!-- LOGO COMO IMAGEN -->
+        <img 
+            src="img/Logo1.png"
+            alt="Logo Alinea Future"
+            class="logoblanco"
+        />
+
+        <h1 class="text-4xl md:text-6xl font-bold text-white tracking-tight">
+            Alinea <span class="text-transparent bg-clip-text bg-gradient-brand">Future</span>
+        </h1>
+
+        <p class="text-brand-cyan mt-4 text-sm font-medium tracking-widest uppercase">
+            Soluciones Tecnológicas e Ingeniería
+        </p>
+    </div>
+</div>
+    </div>
+
+    <header id="main-header" class="fixed w-full z-50 transition-all duration-500 py-6 top-0 opacity-0 animate-[fadeInUp_1s_ease-out_1s_forwards]">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <a href="#inicio" class="flex items-center gap-2 group">
+                <img width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="transform group-hover:scale-105 transition-transform duration-500" src="img/Logo1.png">
+                    <path d="M50 10 L90 90 L50 70 L10 90 Z" fill="url(#grad1)" />
+                    <defs>
+                        <linearGradient id="grad1" x1="10" y1="90" x2="90" y2="10" gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#00CED1"/>
+                            <stop offset="1" stop-color="#8A2BE2"/>
+                        </linearGradient>
+                    </defs>
+                </img>
+                <span id="logo-text" class="text-2xl font-bold tracking-tight text-white transition-colors duration-300">
+                    Alinea <span class="text-transparent bg-clip-text bg-gradient-brand">Future</span>
+                </span>
+            </a>
+
+            <nav class="hidden md:flex space-x-8 items-center">
+                <a href="#inicio" class="nav-link text-sm font-medium text-white/80 hover:text-white transition-colors duration-300">Inicio</a>
+                <div class="relative group">
+  <button class="nav-link flex items-center gap-1 text-sm font-medium text-white/80 hover:text-white transition-colors duration-300 focus:outline-none">
+    Servicios
+    <svg class="w-4 h-4 mt-0.5 transition-transform duration-300 group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+    </svg>
+  </button>
+
+  <!-- Dropdown -->
+  <div class="absolute left-0 mt-3 w-64 bg-white rounded-xl shadow-xl border border-slate-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+
+    <a href="Documentacion_normativa.html" class="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-purple transition-colors">
+      Documentación Normativa
+    </a>
+
+    <a href="Ingenieria_procesos.html" class="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-purple transition-colors">
+      Ingeniería de Procesos
+    </a>
+
+    <a href="Herramientas_web.html" class="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-purple transition-colors">
+      Herramientas Web
+    </a>
+
+    <a href="Paginaweb.html" class="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-purple transition-colors">
+      Creación de Página Web
+    </a>
+
+    <a href="soluciones_Excel.html" class="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-purple transition-colors">
+      Soluciones en Excel
+    </a>
+
+    <a href="Automatizacion.html" class="block px-5 py-3 text-sm font-medium text-slate-700 hover:bg-slate-50 hover:text-brand-purple transition-colors border-t">
+      Automatización & IA
+    </a>
+
+  </div>
+</div>
+                <a href="#metodologia" class="nav-link text-sm font-medium text-white/80 hover:text-white transition-colors duration-300">Metodología</a>
+                <a href="#contacto" class="bg-gradient-brand hover:opacity-90 text-white px-5 py-2.5 rounded-lg text-sm font-bold shadow-lg transition-all duration-300 hover:-translate-y-1 hover:shadow-brand-cyan/20">
+                    Diagnóstico
+                </a>
+            </nav>
+
+            <button id="mobile-menu-btn" class="md:hidden text-white hover:text-brand-cyan transition-colors p-2">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="fixed inset-0 bg-white z-[60] transform translate-x-full transition-transform duration-500 cubic-bezier(0.4, 0, 0.2, 1) flex flex-col p-8">
+            <div class="flex justify-between items-center mb-10">
+                <span class="text-2xl font-bold text-brand-primary">Alinea <span class="text-brand-purple">Future</span></span>
+                <button id="close-menu-btn" class="text-slate-800 hover:text-red-500 p-2 transition-colors">
+                    <i data-lucide="x" class="w-8 h-8"></i>
+                </button>
+            </div>
+            <div class="flex flex-col space-y-6">
+                <a href="#inicio" class="mobile-link text-xl font-bold text-slate-800 border-b border-slate-100 pb-4">Inicio</a>
+                <a href="#servicios" class="mobile-link text-xl font-bold text-slate-800 border-b border-slate-100 pb-4">Servicios</a>
+                <a href="#metodologia" class="mobile-link text-xl font-bold text-slate-800 border-b border-slate-100 pb-4">Metodología</a>
+                <a href="#contacto" class="mobile-link w-full bg-gradient-brand text-white px-6 py-4 rounded-xl text-center font-bold text-lg mt-4 shadow-lg">
+                    Solicitar Diagnóstico
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="relative min-h-screen flex items-center bg-brand-primary overflow-hidden pt-20">
+            <div class="absolute inset-0 bg-grid-pattern opacity-30 pointer-events-none"></div>
+            <div class="absolute top-0 right-0 w-full md:w-2/3 h-full bg-gradient-to-l from-brand-purple/20 to-transparent pointer-events-none"></div>
+            
+            <div class="container mx-auto px-6 relative z-10">
+                <div class="max-w-4xl">
+                    <div class="hero-animate inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md px-4 py-2 rounded-full mb-8 border border-white/10">
+                        <span class="w-2 h-2 bg-brand-cyan rounded-full animate-pulse"></span>
+                        <span class="text-white text-xs font-semibold uppercase tracking-wider">Ingeniería &bull; Digitalización &bull; Datos</span>
+                    </div>
+                    
+                    <h1 class="hero-animate delay-100 text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-8 leading-tight">
+                        Optimizamos la <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-brand">ingeniería del futuro</span>
+                    </h1>
+                    
+                    <p class="hero-animate delay-200 text-xl text-slate-300 mb-12 max-w-2xl font-light leading-relaxed">
+                        Integramos la <strong>Gestión Documental Normativa</strong> con herramientas digitales avanzadas (Web & Excel) para una excelencia operativa total.
+                    </p>
+                    
+                    <div class="hero-animate delay-300 flex flex-col sm:flex-row gap-4">
+                        <a href="#contacto" class="bg-gradient-brand hover:opacity-90 text-white px-8 py-4 rounded-xl font-bold text-lg flex items-center justify-center shadow-lg hover:shadow-brand-purple/30 transition-all duration-300 hover:-translate-y-1">
+                            Solicitar Asesoría
+                            <i data-lucide="arrow-right" class="ml-2 w-5 h-5"></i>
+                        </a>
+                        <a href="#servicios" class="bg-white/5 hover:bg-white/10 text-white backdrop-blur-sm border border-white/20 px-8 py-4 rounded-xl font-bold text-lg transition-all duration-300 text-center flex items-center justify-center hover:scale-105">
+                            Ver Servicios
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="py-32 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-20 reveal">
+                    <h2 class="text-brand-primary text-sm font-bold uppercase tracking-widest mb-4">Catálogo de Soluciones</h2>
+                    <p class="text-4xl font-bold text-slate-900 mb-6">Infraestructura Operativa & Digital</p>
+                    <div class="w-24 h-1.5 bg-gradient-brand mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="reveal bg-slate-50 p-10 rounded-[2rem] border border-slate-100 hover:border-brand-purple/30 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group cursor-default">
+                        <div class="bg-brand-primary w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:bg-gradient-brand transition-all duration-500 group-hover:scale-110">
+                            <i data-lucide="file-text" class="text-white w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4"><a href="Documentacion_normativa.html">Documentación Normativa</a></h3>
+                        <p class="text-slate-600 mb-6">Creación técnica y estructurada de Políticas, Normas, Procedimientos (SOPs), Instructivos, Formularios y Registros auditables.</p>
+                        <ul class="text-sm text-slate-500 space-y-2">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-brand-cyan mr-2"></i>Estandarización ISO</li>
+                        </ul>
+                    </div>
+
+                    <div class="reveal delay-100 bg-slate-50 p-10 rounded-[2rem] border border-slate-100 hover:border-brand-purple/30 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group cursor-default">
+                        <div class="bg-brand-primary w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:bg-gradient-brand transition-all duration-500 group-hover:scale-110">
+                            <i data-lucide="settings-2" class="text-white w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4"><a href="Ingenieria_procesos.html">Ingeniería de Procesos</a></h3>
+                        <p class="text-slate-600 mb-6">Optimización mediante Lean Six Sigma y 5S. Análisis de flujos de valor (VSM) para eliminar desperdicios.</p>
+                        <ul class="text-sm text-slate-500 space-y-2">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-brand-cyan mr-2"></i>Mejora Continua</li>
+                        </ul>
+                    </div>
+
+                    <div class="reveal delay-200 bg-slate-50 p-10 rounded-[2rem] border border-slate-100 hover:border-brand-purple/30 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group cursor-default">
+                        <div class="bg-brand-primary w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:bg-gradient-brand transition-all duration-500 group-hover:scale-110">
+                            <i data-lucide="layout-dashboard" class="text-white w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4"><a href="Herramientas_web.html">Herramientas Web</a></h3>
+                        <p class="text-slate-600 mb-6">Desarrollo de aplicaciones web personalizadas: Dashboards interactivos, sistemas de registro de inventarios y CRMs operativos.</p>
+                        <ul class="text-sm text-slate-500 space-y-2">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-brand-cyan mr-2"></i>Control de Inventarios</li>
+                        </ul>
+                    </div>
+
+                    <div class="reveal bg-slate-50 p-10 rounded-[2rem] border border-slate-100 hover:border-brand-purple/30 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group cursor-default">
+                        <div class="bg-brand-primary w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:bg-gradient-brand transition-all duration-500 group-hover:scale-110">
+                            <i data-lucide="globe" class="text-white w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4"><a href="Paginaweb.html">Creación de Páginas Web</a></h3>
+                        <p class="text-slate-600 mb-6">Diseño y desarrollo de sitios web profesionales, modernos y adaptables (responsive) para potenciar su presencia digital.</p>
+                    </div>
+
+                    <div class="reveal delay-100 bg-slate-50 p-10 rounded-[2rem] border border-slate-100 hover:border-brand-purple/30 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group cursor-default">
+                        <div class="bg-brand-primary w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:bg-gradient-brand transition-all duration-500 group-hover:scale-110">
+                            <i data-lucide="table-2" class="text-white w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4"><a href="soluciones_Excel.html">Soluciones en Excel</a></h3>
+                        <p class="text-slate-600 mb-6">Desarrollo de todo tipo de formularios inteligentes en Excel, automatización con macros y plantillas de gestión robustas.</p>
+                    </div>
+
+                    <div class="reveal delay-200 bg-slate-50 p-10 rounded-[2rem] border border-slate-100 hover:border-brand-purple/30 transition-all duration-500 hover:shadow-xl hover:-translate-y-2 group cursor-default">
+                        <div class="bg-brand-primary w-16 h-16 rounded-2xl flex items-center justify-center mb-8 shadow-lg group-hover:bg-gradient-brand transition-all duration-500 group-hover:scale-110">
+                            <i data-lucide="bot" class="text-white w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-slate-900 mb-4"><a href="Automatizacion.html">Automatización & IA</a></h3>
+                        <p class="text-slate-600 mb-6">Implementación de Chatbots y asistentes virtuales para atención al cliente y soporte operativo 24/7.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="py-32 bg-brand-light">
+            <div class="container mx-auto px-6 reveal">
+                <div class="max-w-5xl mx-auto bg-white rounded-[2rem] shadow-xl overflow-hidden flex flex-col md:flex-row">
+                    <div class="md:w-5/12 bg-brand-primary p-12 text-white flex flex-col justify-between relative overflow-hidden">
+                        <div class="relative z-10">
+                            <img width="60" height="60" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" class="logoa-container" src="img/Logo1.png">
+                            <br>
+                            <h3 class="text-3xl font-bold mb-6">Hablemos de su Proyecto</h3>
+                            <p class="text-blue-200 mb-8">Ya sea documentación técnica, desarrollo web o ingeniería de procesos, tenemos la solución.</p>
+                            <div class="space-y-6">
+                                <div class="flex items-center gap-4">
+                                    <div class="bg-white/10 p-3 rounded-lg"><i data-lucide="mail" class="text-brand-cyan"></i></div>
+                                    <span class="font-medium">contacto@alineafuture.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -bottom-24 -right-24 w-64 h-64 bg-gradient-brand opacity-30 rounded-full blur-3xl"></div>
+                    </div>
+
+                    <div class="md:w-7/12 p-12">
+                        <form id="contact-form" class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Nombre</label>
+                                <input required type="text" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20 outline-none transition-all bg-slate-50">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Servicio de Interés</label>
+                                <select class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20 outline-none transition-all bg-slate-50 cursor-pointer hover:border-brand-purple/50">
+                                    <option>Documentación Normativa</option>
+                                    <option>Desarrollo Web / Herramientas</option>
+                                    <option>Soluciones en Excel</option>
+                                    <option>Ingeniería de Procesos</option>
+                                    <option>Otro</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-bold text-slate-700 mb-2">Detalles del Requerimiento</label>
+                                <textarea required rows="3" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-brand-purple focus:ring-2 focus:ring-brand-purple/20 outline-none transition-all bg-slate-50"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-gradient-brand hover:opacity-90 text-white font-bold py-4 rounded-xl transition-all duration-300 shadow-lg active:scale-95 hover:shadow-brand-purple/40">
+                                Enviar Solicitud
+                            </button>
+                        </form>
+                        
+                        <div id="success-message" class="hidden text-center py-10 animate-pulse">
+                            <h4 class="text-2xl font-bold text-brand-purple">¡Mensaje Enviado!</h4>
+                            <p class="text-slate-500">Un experto técnico analizará su caso.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-brand-primary text-slate-300 pt-20 pb-10 border-t border-white/10 relative overflow-hidden">
+        <div class="absolute inset-0 bg-grid-pattern opacity-10 pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                
+                <div class="space-y-6">
+                    <a href="#inicio" class="flex items-center gap-2 group">
+                        <img width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" src="img/Logo1.png">
+                            <path d="M50 10 L90 90 L50 70 L10 90 Z" fill="url(#gradFooter)" />
+                            <defs>
+                                <linearGradient id="gradFooter" x1="10" y1="90" x2="90" y2="10" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#00CED1"/>
+                                    <stop offset="1" stop-color="#8A2BE2"/>
+                                </linearGradient>
+                            </defs>
+                        </img>
+                        <span class="text-xl font-bold tracking-tight text-white">
+                            Alinea <span class="text-brand-cyan">Future</span>
+                        </span>
+                    </a>
+                    <p class="text-sm leading-relaxed text-slate-400">
+                        Transformamos operaciones industriales mediante ingeniería de procesos, documentación normativa y soluciones digitales a medida.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-purple hover:text-white transition-all duration-300">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-purple hover:text-white transition-all duration-300">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wide">Navegación</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="#inicio" class="hover:text-brand-cyan transition-colors flex items-center"><i data-lucide="chevron-right" class="w-3 h-3 mr-2"></i>Inicio</a></li>
+                        <li><a href="#servicios" class="hover:text-brand-cyan transition-colors flex items-center"><i data-lucide="chevron-right" class="w-3 h-3 mr-2"></i>Servicios</a></li>
+                        <li><a href="#metodologia" class="hover:text-brand-cyan transition-colors flex items-center"><i data-lucide="chevron-right" class="w-3 h-3 mr-2"></i>Metodología</a></li>
+                        <li><a href="#contacto" class="hover:text-brand-cyan transition-colors flex items-center"><i data-lucide="chevron-right" class="w-3 h-3 mr-2"></i>Solicitar Diagnóstico</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wide">Soluciones</h4>
+                    <ul class="space-y-4 text-sm">
+                        <li><a href="#" class="hover:text-brand-cyan transition-colors">Gestión Documental (ISO)</a></li>
+                        <li><a href="#" class="hover:text-brand-cyan transition-colors">Desarrollo Web & Apps</a></li>
+                        <li><a href="#" class="hover:text-brand-cyan transition-colors">Automatización Excel</a></li>
+                        <li><a href="#" class="hover:text-brand-cyan transition-colors">Ingeniería Lean Six Sigma</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-6 tracking-wide">Contacto</h4>
+                    <ul class="space-y-6">
+                        <li class="flex items-start space-x-4 group">
+                            <div class="bg-brand-cyan/10 p-2 rounded-lg group-hover:bg-brand-cyan/20 transition-colors">
+                                <i data-lucide="map-pin" class="w-5 h-5 text-brand-cyan"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs uppercase text-slate-500 font-bold mb-1">Ubicación</span>
+                                <span class="text-sm text-white">Santiago, República Dominicana<br>Disponible Globalmente (Remoto)</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-4 group">
+                            <div class="bg-brand-cyan/10 p-2 rounded-lg group-hover:bg-brand-cyan/20 transition-colors">
+                                <i data-lucide="mail" class="w-5 h-5 text-brand-cyan"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs uppercase text-slate-500 font-bold mb-1">Correo</span>
+                                <a href="mailto:info@alineafuture.com" class="text-sm text-white hover:text-brand-cyan transition-colors">info@alineafuture.com</a>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-4 group">
+                            <div class="bg-brand-cyan/10 p-2 rounded-lg group-hover:bg-brand-cyan/20 transition-colors">
+                                <i data-lucide="phone" class="w-5 h-5 text-brand-cyan"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs uppercase text-slate-500 font-bold mb-1">Teléfono / WhatsApp</span>
+                                <a href="https://wa.me/8299267487/?text=Me interesa saber mas información" class="text-sm text-white hover:text-brand-cyan transition-colors">+1 (829) 926-7487</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500">
+                <p>&copy; 2026 Alinea Future Consulting. Todos los derechos reservados.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition-colors">Política de Privacidad</a>
+                    <a href="#" class="hover:text-white transition-colors">Términos de Servicio</a>
+                </div>
+            </div>
+        </div>
+
+         <!-- Chat Bot -->
+    <div id="alinea-bot-root" class="fixed bottom-8 right-8 z-50 flex flex-col items-end font-sans">
+    
+    <div id="chat-interface" class="hidden flex-col w-[350px] h-[500px] bg-white rounded-2xl shadow-2xl overflow-hidden border border-slate-200 origin-bottom-right transition-all duration-300 ease-out transform scale-95 opacity-0">
+        
+        <div class="h-16 bg-[#002651] flex items-center justify-between px-5 shadow-md relative overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-r from-[#8A2BE2]/20 to-[#00CED1]/20"></div>
+            
+            <div class="relative z-10 flex items-center gap-3">
+                <div class="relative">
+                    <div class="w-2.5 h-2.5 bg-[#00CED1] rounded-full animate-pulse absolute top-0 right-0 border border-[#002651]"></div>
+                    <div class="w-9 h-9 bg-white/10 rounded-full flex items-center justify-center backdrop-blur-sm border border-white/20">
+                        <i class="fa-solid fa-robot text-white text-sm"></i>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-white font-bold text-sm tracking-wide">Soporte Alinea</h3>
+                    <p class="text-[10px] text-slate-300 uppercase tracking-wider font-medium">Ingeniería & Procesos</p>
+                </div>
+            </div>
+            
+            <button id="btn-minimize" class="relative z-10 w-8 h-8 flex items-center justify-center text-slate-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors">
+                <i class="fa-solid fa-chevron-down text-xs"></i>
+            </button>
+        </div>
+
+        <div id="chat-feed" class="flex-1 bg-slate-50 p-5 overflow-y-auto space-y-4 scroll-smooth">
+            <div class="text-center text-[10px] text-slate-400 font-medium my-2 uppercase tracking-widest">
+                Sesión Iniciada &bull; <span id="chat-timestamp">Hoy</span>
+            </div>
+            
+            <div class="flex gap-3">
+                <div class="w-8 h-8 rounded-full bg-[#002651] flex-shrink-0 flex items-center justify-center text-white text-xs mt-1">
+                    AI
+                </div>
+                <div class="bg-white p-3.5 rounded-2xl rounded-tl-none shadow-sm border border-slate-100 text-sm text-slate-600 leading-relaxed max-w-[85%]">
+                    <strong>Bienvenido a Alinea Future.</strong><br>
+                    Soy su asistente de diagnóstico inicial. ¿En qué área técnica requiere optimización hoy?
+                </div>
+            </div>
+        </div>
+
+        <div class="p-4 bg-white border-t border-slate-100">
+            <div class="relative flex items-center">
+                <input type="text" id="user-input" placeholder="Describa su requerimiento..." 
+                    class="w-full bg-slate-50 text-slate-700 text-sm border border-slate-200 rounded-xl pl-4 pr-12 py-3.5 focus:outline-none focus:border-[#8A2BE2] focus:ring-1 focus:ring-[#8A2BE2] transition-all placeholder:text-slate-400">
+                
+                <button id="btn-send" class="absolute right-2 w-9 h-9 bg-gradient-to-r from-[#8A2BE2] to-[#00CED1] rounded-lg flex items-center justify-center text-white shadow-md hover:opacity-90 active:scale-95 transition-all disabled:opacity-50 disabled:cursor-not-allowed">
+                    <i class="fa-solid fa-paper-plane text-xs"></i>
+                </button>
+            </div>
+            <div class="text-center mt-2">
+                <p class="text-[9px] text-slate-400">Powered by Alinea Future Consulting &copy;</p>
+            </div>
+        </div>
+    </div>
+
+    <button id="btn-toggle-chat" class="w-16 h-16 bg-gradient-to-r from-[#002651] to-[#1e1b4b] rounded-full shadow-2xl flex items-center justify-center text-white border-2 border-white/20 hover:scale-105 hover:shadow-[#00CED1]/20 transition-all duration-300 group z-50">
+        <i class="fa-solid fa-comments text-2xl group-hover:hidden transition-all"></i>
+        <i class="fa-solid fa-xmark text-2xl hidden group-hover:block transition-all animate-in zoom-in"></i>
+        
+        <span class="absolute top-0 right-0 flex h-4 w-4">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#00CED1] opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-4 w-4 bg-[#00CED1] border-2 border-white"></span>
+        </span>
+    </button>
+</div>
+    </footer>
+
+   <script src="js/Indexf.js"></script>
+   <script src="js/chatbots.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+
+        body { font-family: 'Inter', sans-serif; }
+        .bg-brand-primary { background-color: #002651; }
+        .bg-brand-purple { background-color: #8A2BE2; }
+        .bg-brand-cyan { background-color: #00CED1; }
+        .text-brand-cyan { color: #00CED1; }
+        .text-brand-purple { color: #8A2BE2; }
+        .bg-gradient-brand { background: linear-gradient(135deg, #8A2BE2 0%, #00CED1 100%); }
+        
+        #main-header { transition: all 0.3s ease; }
+        #main-header.scrolled {
+            background: rgba(0, 38, 81, 0.95);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        .animate-in { animation: fadeInUp 0.8s ease forwards; }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        
+        #mobile-menu { transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        #mobile-menu.open { transform: translateX(0); }
+
+        #main-header .nav-link { color: #0f172a !important; }
+        #main-header .nav-link:hover { color: #8A2BE2 !important; }
+        #main-header.scrolled .nav-link { color: rgba(255,255,255,0.85) !important; }
+        #main-header.scrolled .nav-link:hover { color: #ffffff !important; }
+        #main-header #logo-text { color: #0f172a !important; }
+        #main-header.scrolled #logo-text { color: #ffffff !important; }
+   

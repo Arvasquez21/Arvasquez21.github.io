@@ -1,0 +1,92 @@
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: #f8fafc;
+            /* Ocultar barras de scroll durante la carga */
+            overflow: hidden; 
+        }
+
+        /* --- SPLASH SCREEN --- */
+        #splash-screen {
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s;
+        }
+        
+        /* --- ANIMACIONES SINCRONIZADAS --- */
+        /* Las animaciones del Hero solo corren cuando el body tiene la clase .loaded */
+        .hero-animate {
+            opacity: 0; /* Inicialmente invisible */
+        }
+        
+        body.loaded .hero-animate {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+
+        /* Delays dependientes de la carga */
+        body.loaded .delay-100 { animation-delay: 0.1s; }
+        body.loaded .delay-200 { animation-delay: 0.2s; }
+        body.loaded .delay-300 { animation-delay: 0.3s; }
+
+        /* Otros estilos */
+        .bg-grid-pattern {
+            background-image: linear-gradient(to right, rgba(255,255,255,0.03) 1px, transparent 1px),
+                              linear-gradient(to bottom, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .glass-header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        /* Definición explícita de keyframes CSS por seguridad */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .logoblanco {
+    width: 80px;
+    max-width: 45vw;
+    height: auto;
+    margin-bottom: 1.5rem;
+
+    /* Refuerzo visual del logo */
+    filter: drop-shadow(0 8px 20px rgba(0, 206, 209, 0.35));
+
+    /* Render limpio */
+    image-rendering: auto;
+
+    /* Animación elegante */
+    animation: logoblancoFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes logoblancoFloat {
+    0%   { transform: translateY(4px); }
+    50%  { transform: translateY(-4px); }
+    100% { transform: translateY(4px); }
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+    .logoblanco {
+        width: 180px;
+    }
+}
+
+
+.logoa-container {
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+}
